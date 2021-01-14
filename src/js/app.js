@@ -11,7 +11,7 @@ App = {
       for (i = 0; i < data.length; i ++) {
         borTemplate.find('.panel-title').text(data[i].name);
         borTemplate.find('img').attr('src', data[i].picture);
-        borTemplate.find('.bor-breed').text(data[i].breed);
+        borTemplate.find('.bor-idtree').text(data[i].idtree);
         borTemplate.find('.bor-age').text(data[i].age);
         borTemplate.find('.bor-location').text(data[i].location);
         borTemplate.find('.btn-adopt').attr('data-id', data[i].id);
