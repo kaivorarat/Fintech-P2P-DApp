@@ -25,23 +25,181 @@ mini project นี้ใช้โครงสร้างของ truffle unbo
    แก้ไขระบบหลังบ้านที่ไฟล์ app.js ให้สามารถใช้งาน private blockchain โดยเชื่อมต่อ Ganache และ Metamask 
    
 # Implementation
-สร้าง Directory สำหรับบันทึก Project 
+- ติดตั้ง VisualStudioCode พร้อมกับติดตั้ง Solidity extension
+- ทำการดาวน์โหลด Ganach Truffle. และใช้คำสั่ง chmod +x ganach...  
+- ติดตั้ง npm  ใช้คำสั่ง  
+```
+sudo apt install npm
+
+```
+- ติดตั้ง truffle ใช้คำสั่ง 
+```
+sudo npm install -g truffle
+
+```
+- สร้าง Directory สำหรับบันทึก Project 
 ```
 mkdir p2p
 cd p2p
 ```
-ดาวน์โหลดโครงสร้าง pet-shop ซึ่งมีอยู่ใน Truffle Framework โดยใช้คำสั่งต่อไปนี้
+- ดาวน์โหลดโครงสร้าง pet-shop ซึ่งมีอยู่ใน Truffle Framework โดยใช้คำสั่งต่อไปนี้
 ```
 truffle unbox pet-shop
 ```
+---------------------------------
+- แก้ไขไฟล์ Adoption.sol ให้รองรับการ adopt เกษตรกรจำนวน 16 คน
+---------------------------------
+```
+pragma solidity ^0.5.0;
 
+contract Adoption {
+    address[16] public adopters;
 
+    function adopt(uint borId) public returns (uint){
+        require(borId >= 0 && borId <=15);
+        adopters[borId] = msg.sender;
+        return borId;
+    }
 
+    function getAdopters() public view returns (address[16] memory){
+        return adopters;
+    }
+}
 
+```
 
+- สร้างไฟล์ app2p.html  สำหรับติดต่อผู้ใช้ เพื่อใช้งานโปรเจคง่ายขึ้น
 
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ioBiz.co P2P</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="./build/home.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
 
+  </head>
+  <body>
+   <!-- NAVBAR -->
+    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+      <a href="home.html" class="navbar-item">
+        <b>ioBiz.co P2P</b>
+      </a>
+    
+      <div class="navbar-item">
+        <a href="#" class="navbar-item">
+          Lender
+        </a>
+      </div>
 
+      <div class="navbar-item">
+        <a href="#" class="navbar-item">
+          Borrower
+        </a>
+      </div>
+    </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="column">
+        <div class="title-container">
+          <h1 class="title" id="home-title">
+              Peer to Peer 
+          </h1>
+          <p class="subtitle" id="home-subtitle">
+            Built on the Ethereum blockchian
+          </p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column"> 
+            <div class="card">
+                <div class="card-content">
+                  <p class="title">
+                    ผู้ให้กู้ (Lenders)
+                  </p><br>
+                  <p class="subtitle">
+                    นำเงินมาลงทุนเพื่อสร้างโอกาสให้เพื่อนเกษตรกร
+                  </p>
+                  <div class="ul-container">
+                    <ul>
+                        <li> <i class="fa fa-usd" aria-hidden="true"></i> มีผลตอบแทนให้</li>
+                        <li> <i class="fa fa-usd" aria-hidden="true"></i> ระยะเวลายืดหยุ่น</li>
+                        <li> <i class="fa fa-usd" aria-hidden="true"></i> ไร้ความเสี่ยง </li>
+                    </ul>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <span>
+                        <a class="button is-link is-outlined" href="http://localhost:3000/"> ให้โอกาส! </a>
+                    </span>
+                  </p>
+                </footer>
+              </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                  <p class="title">
+                    ผู้กู้ยืม (Borrowers)
+                  </p><br>
+                  <p class="subtitle">
+                    เงินทุนหมุนเวียนด่วน ใช้เพียงแค่มีต้นไม้มาค้ำประกัน
+                  </p>
+                  <div class="ul-container">
+                    <ul>
+                        <li> <i class="fa fa-usd" aria-hidden="true"></i> ไม่มีค่าธรรมเนียมแอบแฝง</li>
+                        <li> <i class="fa fa-usd" aria-hidden="true"></i> ดอกเบี้ยต่ำ </li>
+                        <li> <i class="fa fa-usd" aria-hidden="true"></i> รับเงินทันที </li>
+                      </ul>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                      <span>
+                          <a class="button is-link is-outlined" href="https://iobiz.co/iot"> เพิ่มโอกาส! </a>
+                      </span>
+                  </p>
+                </footer>
+              </div>
+        </div>
+      </div>
+<!-- 
+      <label for="amount">Amount:</label>
+      <input type="text" id="amount" placeholder="e.g., 95"></input>
+      <button id="send" onclick="App.requestLoan()">Get MetaCoin</button> -->
+      <br>
+    </div>
+  </section>
+  </body>
+</html>
+
+```
+ 
+- ไฟล์ bors.json กำหนดข้อมูลที่จำเป็นของเกษตรกรที่ขอกู้ เช่น ชื่อ, รูปภาพ, ผลตอบแทนที่ให้, ข้อมูลต้นไม้, เงินที่ต้องการกู้ยืม
+ 
+```
+ {
+    "id": 0,
+    "name": "Praitun Yoovidhya",
+    "picture": "images/B1.jpg",
+    "return": "3%",
+    "idtree": "T001",
+    "loan": 3000
+  },
+  
+```
+ 
 
 # Testing
 
