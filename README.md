@@ -202,54 +202,41 @@ contract Adoption {
  
 
 # Testing
+ทำการทดสอบ
+
+เปิดโปรแกรม Ganache
+
+![Ganache](https://user-images.githubusercontent.com/74085966/104696674-37777b00-5741-11eb-858b-b745f5335c18.png)
 
 
-โดยจะได้ Directory ต่างๆ  
-contracts >> Directory สำหรับเก็บ Smart Contracts ที่เขียนด้วยภาษา Solidity  
-migrations >> Directory สำหรับเก็บ File JavaScript ซึ่งเป็น Code ที่ใช้ในการจัดการ Smart Contracts ให้ลงไปยัง Block Chain  
-src >> Directory สำหรับเก็บ File ที่เกี่ยวข้องกับ Web Application เช่น JavaScript, CSS, HTML, images เป็นต้น  
-truffle-config.js >> File ที่ใช้ในการกำหนดค่าของโปรเจ็ค  
+![Ganache](https://user-images.githubusercontent.com/74085966/104696728-4e1dd200-5741-11eb-9915-de156df0ccc7.png)
 
-## Develop Web-Based DApp
-### 1. Create Smart Contract
-ใช้ Visual Studio Code เพื่อสร้างไฟล์ชื่อ Booking.sol ใน contracts Directory โดยมีโค้ดดังนี้
+
+
+ใช้คำสั่งเพื่อรันไฟล์
+
 ```
-pragma solidity ^0.5.0;
+truffle migrate 
 
-contract Booking {
-    address[8] public Bookers;
+npm run dev
 
-    function Reserve(uint CarID) public returns (uint) {
-        require(CarID >= 0 && CarID <=7);
-        Bookers[CarID] = msg.sender;
-        return CarID;
-    }
-
-    function getBookers() public view returns (address[8] memory) {
-        return Bookers;
-    }
-}
 ```
+เปิดไฟล์ app2p.html จะได้ตามตัวอย่างภาพ
 
-### 2. Compile และ Migrate
-ทำการ Compile Smart Contracts โดยใช้คำสั่ง
-```
-truffle compile
-```
-โปรดตรวจสอบว่า Compile Smart Contracts ได้สำเร็จก่อนทำในขั้นตอนต่อไป
+![Ganache](https://user-images.githubusercontent.com/74085966/104696569-1020ae00-5741-11eb-8802-0a86816bc594.png)
 
-เปิดโปรแกรม Ganache โดยการ Double-Click ที่ชื่อไฟล์ จากนั้น Click ที่ New Workspace ในกรณีที่ใช้งานครั้งแรก  
-หรือ Click ที่ Workspace ที่ต้องการใช้งาน
+ทำการกด adopt และยืนยันการปล่อยกู้ให้เกษตรกร
 
-![Ganache](https://user-images.githubusercontent.com/74085959/104412400-c0a27c80-559e-11eb-9f71-76b59eb9e934.png)
+![Ganache](https://user-images.githubusercontent.com/74085966/104696814-6a217380-5741-11eb-94be-c6742e506438.png)
 
-![Ganache2](https://user-images.githubusercontent.com/74085959/104414342-ae2a4200-55a2-11eb-89a9-7c6a497a02d4.png)
+เมื่อทำการเลือกที่จะปล่อยกู้ให้เกษตรกรไปแล้วจะไม่สามารถกดซ้ำได้อีก
 
-ใช้ Visual Studio Code ในการสร้างไฟล์ 2_deploy_contracts.js ใน migrations Directory ดังนี้
-```
-var Booking = artifacts.require("Booking");
+![Ganache](https://user-images.githubusercontent.com/74085966/104696881-7f969d80-5741-11eb-8d68-336a6659332a.png)
 
-module.exports = function(deployer) {
-  deployer.deploy(Booking);
-};
-```
+# back-end ตรวจสอบ transaction ที่ Ganache 
+
+![Ganache](https://user-images.githubusercontent.com/74085966/104696960-9a691200-5741-11eb-8724-fa662fc67d9a.png)
+
+
+
+ 
