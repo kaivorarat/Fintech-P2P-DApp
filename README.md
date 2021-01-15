@@ -6,14 +6,14 @@
 - การจัดทำ (Implementation) ได้แก่ การอธิบายโค้ดเฉพาะส่วนที่สำคัญ
 - ผลการทดสอบ (Testing) แสดงผลลัพธ์ที่ได้จากโครงการ
 
-# บทนำ p2p-blockchain
+# p2p-blockchain
 mini project นี้ใช้โครงสร้างของ truffle unbox Pet-Shop มาดัดแปลง
 แนวคิดพัฒนา DApp สำหรับการกู้ยืมเงินระหว่างบุคคลโดยใช้ Dapp มาออกแบบเพื่อป้องกันการรับเงินกู้ที่ซ้ำซ้อนแล้วไปเกิดปัญหาการมีหนี้สินเกินตัว 
 โดยมีขอบเขตดังนี้
 - ส่วนของนักลงทุนเข้าไปเลือกที่จะให้เงินลงทุนกับเกษตรกร ที่มีต้นไม้ค้ำประกัน 
 - เกษตรกรที่กู้ยืม สามารถถูกเลือกได้เพียงครั้งเดียว (จนกว่าจะเริ่ม deploy ใหม่)
 
-# การวิเคราะห์และออกแบบ
+# Analysis & Design
 - ศึกษาส่วนติดต่อผู้ใช้โดยออกแบบ front end โดยในโปรเจคจะใช้ไฟล์ app2p.html  
 - พัฒนา DApp ส่วนของข้อมูลเกษตรกร โดยใช้โครงสร้างของ truffle unbox pet-shop
 - ทดลองการใช้งานโดยใช้ Matamask และ Ganache มาใช้จำลองเป็น private blockchain
@@ -27,14 +27,25 @@ mini project นี้ใช้โครงสร้างของ truffle unbo
 # Implementation
 สร้าง Directory สำหรับบันทึก Project 
 ```
-mkdir Ass3
-cd Ass3
+mkdir p2p
+cd p2p
 ```
-
-ดาวน์โหลดโครงสร้างของโปรเจ็ค pet-shop ซึ่งมีอยู่ใน Truffle Framework โดยใช้คำสั่งต่อไปนี้
+ดาวน์โหลดโครงสร้าง pet-shop ซึ่งมีอยู่ใน Truffle Framework โดยใช้คำสั่งต่อไปนี้
 ```
 truffle unbox pet-shop
 ```
+
+
+
+
+
+
+
+
+
+# Testing
+
+
 โดยจะได้ Directory ต่างๆ  
 contracts >> Directory สำหรับเก็บ Smart Contracts ที่เขียนด้วยภาษา Solidity  
 migrations >> Directory สำหรับเก็บ File JavaScript ซึ่งเป็น Code ที่ใช้ในการจัดการ Smart Contracts ให้ลงไปยัง Block Chain  
