@@ -1,4 +1,4 @@
-# p2p-blockchain
+# Assignment : Fintech.UTCC.Dapp
 
 เอกสารประกอบโครงการ (สร้างเป็นไฟล์ README.md ใน github)
 - บทนำ แสดงวัตถุประสงค์ของโครงการ
@@ -6,7 +6,7 @@
 - การจัดทำ (Implementation) ได้แก่ การอธิบายโค้ดเฉพาะส่วนที่สำคัญ
 - ผลการทดสอบ (Testing) แสดงผลลัพธ์ที่ได้จากโครงการ
 
-# บทนำ Assignment : Fintech.UTCC.Dapp
+# บทนำ p2p-blockchain
 mini project นี้ใช้โครงสร้างของ truffle unbox Pet-Shop มาดัดแปลง
 แนวคิดพัฒนา DApp สำหรับการกู้ยืมเงินระหว่างบุคคลโดยใช้ Dapp มาออกแบบเพื่อป้องกันการรับเงินกู้ที่ซ้ำซ้อนแล้วไปเกิดปัญหาการมีหนี้สินเกินตัว 
 โดยมีขอบเขตดังนี้
@@ -18,20 +18,14 @@ mini project นี้ใช้โครงสร้างของ truffle unbo
 - พัฒนา DApp ส่วนของข้อมูลเกษตรกร โดยใช้โครงสร้างของ truffle unbox pet-shop
 - ทดลองการใช้งานโดยใช้ Matamask และ Ganache มาใช้จำลองเป็น private blockchain
  
-### Front-End
-   ไฟล์ app2p.html หรือ Front-End File สำหรับสร้าง User Interface ที่ติดต่อกับผู้ใช้งาน  
-    
+# Front-End
+   ไฟล์ app2p.html และ index.html ในโฟลเดอร์ src เป็นส่วนติดต่อกับผู้ใช้งาน  
 
-### Back-End
-   app.js หรือ Back-end File สำหรับ Coding program  
-   โดยภายใต้ File นี้จะมีการเรียกใช้ File ต่างๆ และ คืนค่ากลับไปยังตัวแปรต่างๆ  
-   อาทิ การเรียกใช้ไฟล์ด้วยคำสั่ง get.json เรียกใช้ Cars.json โดยมีคำสั่ง For Loop  
-   เพื่อดึงข้อมูลสำหรับตั้งค่าตัวแปรต่างๆให้กับ CarsTemplate สำหรับแสดงผลใน Front-end  
-   initWeb3 เป็นการระบุว่าจะใช้ Block-chain ใด (web3) ในการเชื่อมต่อกับ Smart Contract  (Metamask ,Legacy browser และ Ganache)
-   markAdopted เป็น Function เชื่อมต่อไปยัง Wallet address และเมื่อมี Transaction เกิดขึ้นการแสดงผลของปุ่น Reserve จะเปลี่ยนเป็น Reserved เป็นต้น
-
-## กำหนดค่าสิ่งแวดล้อม
-สร้าง Directory สำหรับบันทึก Projectนี้ และ ใช้คำสั่งต่อไปนี้เพื่อสร้างและย้ายเข้าไปยัง Directory ชื่อ Ass3
+# Back-End
+   แก้ไขระบบหลังบ้านที่ไฟล์ app.js ให้สามารถใช้งาน private blockchain โดยเชื่อมต่อ Ganache และ Metamask 
+   
+# Implementation
+สร้าง Directory สำหรับบันทึก Project 
 ```
 mkdir Ass3
 cd Ass3
