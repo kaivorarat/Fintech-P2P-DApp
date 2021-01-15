@@ -3,128 +3,128 @@
     "id": 0,
     "name": "Praitun Yoovidhya",
     "picture": "images/B1.jpg",
-    "age": 52,
+    "return": "3%",
     "idtree": "Praitun",
-    "location": "Nong Khai"
+    "loan": 3000
   },
   {
     "id": 1,
     "name": "Ti Nung Cha Narkbunnum",
     "picture": "images/B2.jpg",
-    "age": 34,
+    "return": "4%",
     "idtree": "Narkbunnum",
-    "location": "Nong Bua Lamphu"
+    "loan": 3500
   },
   {
     "id": 2,
     "name": "Choonhavan Atitarn",
     "picture": "images/B3.jpg",
-    "age": 31,
+    "return": "5%",
     "idtree": "Atitarn",
-    "location": "Khon Kaen"
+    "loan": 4500
   },
   {
     "id": 3,
     "name": "Adirake Kaewburesai",
     "picture": "images/B4.jpg",
-    "age": 42,
+    "return": "4.5%",
     "idtree": "Kaewburesai",
-    "location": "Loei"
+    "loan": 5000
   },
   {
     "id": 4,
     "name": "Sunisa Yuvaves",
     "picture": "images/B5.jpg",
-    "age": 37,
+    "return": "2.5%",
     "idtree": "Yuvaves",
-    "location": "Lopburi"
+    "loan": 4000
   },
   {
     "id": 5,
     "name": "Kamala Chan'ocha",
     "picture": "images/B6.jpg",
-    "age": 42,
+    "return": "4.5%",
     "idtree": "Kamala",
-    "location": "Chaiyabhom"
+    "loan": 7000
   },
   {
     "id": 6,
     "name": "Rochana Sirisopa",
     "picture": "images/B7.jpg",
-    "age": 36,
+    "return": "3.6%",
     "idtree": "Rochana",
-    "location": "Nakornnayok"
+    "loan": 7500
   },
   {
     "id": 7,
     "name": "Sangwan Sutabuhr",
     "picture": "images/B8.jpg",
-    "age": 38,
+    "return": "5%",
     "idtree": "Sutabuhr",
-    "location": "Lamphun"
+    "loan": 8000
   },
   {
     "id": 8,
     "name": "Chomkwan Vejjajiva",
     "picture": "images/B9.jpg",
-    "age": 29,
+    "return": "3%",
     "idtree": "Chomkwan",
-    "location": "Lampang"
+    "loan": 7500
   },
   {
     "id": 9,
     "name": "Thanaboon Khadpo",
     "picture": "images/B10.jpg",
-    "age": 30,
+    "return": "2.5",
     "idtree": "Khadpo",
-    "location": "Kamphaeng Phet"
+    "loan": 3000
   },
   {
     "id": 10,
     "name": "Pongkun Suppamongkon",
     "picture": "images/B11.jpg",
-    "age": 27,
+    "return": "2.2%",
     "idtree": "Pongkun",
-    "location": "Kanchanaburi"
+    "loan": 4000
   },
   {
     "id": 11,
     "name": "Pranop Chatwilai",
     "picture": "images/B12.jpg",
-    "age": 30,
+    "return": "4%",
     "idtree": "Pranop",
-    "location": "Kalasin"
+    "loan": 5000
   },
   {
     "id": 12,
     "name": "Nuananong Boripat",
     "picture": "images/B13.jpg",
-    "age": 43,
+    "return": "5%",
     "idtree": "Boripat",
-    "location": "Narathiwat"
+    "loan": 8000
   },
   {
     "id": 13,
     "name": "Ittiporn Kongpaisarn",
     "picture": "images/B14.jpg",
-    "age": 54,
+    "return": "4%",
     "idtree": "Ittiporn",
-    "location": "Nakhon Si Thammarat"
+    "loan": 8500
   },
   {
     "id": 14,
     "name": "Nantin Sangwit",
     "picture": "images/B15.jpg",
-    "age": 52,
+    "return": "2.5%",
     "idtree": "Sangwit",
-    "location": "Nakhon Sawan"
+    "loan": 9000
   },
   {
     "id": 15,
     "name": "Barinot Preecha",
     "picture": "images/B16.jpg",
-    "age": 42,
+    "return": "4.2%",
     "idtree": "Preecha",
-    "location": "Nakhon Ratchasima"
+    "loan": 6500
   }
 ]
